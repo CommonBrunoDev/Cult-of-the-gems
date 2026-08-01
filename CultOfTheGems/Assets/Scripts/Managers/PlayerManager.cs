@@ -5,6 +5,11 @@ using UnityEngine.InputSystem;
 
 public class PlayerManager : MonoBehaviour
 {
+    public enum PlayerState
+    {
+        Normal,
+        MultiSelect,
+    }
     [SerializeField] private LayerMask interactableLayer;
     [SerializeField] private float cameraSpeed = 5f;
     [SerializeField] private float cameraSpeedModifier = 1.6f;
@@ -42,7 +47,10 @@ public class PlayerManager : MonoBehaviour
             }
             else
             {
-                
+                if (isHoldingInteract)
+                {
+                    
+                }
             }
         }
     }
@@ -51,15 +59,18 @@ public class PlayerManager : MonoBehaviour
         
     }
 
-    private RaycastHit2D GetClosestInteractable(RaycastHit2D[] hits,Vector3 position)
+    private RaycastHit2D GetClosestInteractable(RaycastHit2D[] hits, Vector3 position)
     {
-        RaycastHit2D closest = hits[0];s
+        RaycastHit2D closest = hits[0];
+        int interactPriority = hits[0].collider.gameObject.GetComponent<Interactable>().priority;
         float closestDistance = float.MaxValue;
+        
         for (int i = 1; i < hits.Length; i++)
         {
             if (Vector3.Distance(hits[i].point, position) < closestDistance)
             {
-                closest = hits[i];
+                if (hits[i].collider.gameObject.GetComponent<Interactable>().priority > interactPriority)
+                {closest = hits[i];}
             }
         }
         return closest;

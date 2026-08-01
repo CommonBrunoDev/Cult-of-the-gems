@@ -6,4 +6,6 @@ public interface Interactable
     void InteractHold();
     void OnFocusEnter();
     void OnFocusExit();
+
+    int priority {get; set;}
 }
