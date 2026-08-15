@@ -9,7 +9,7 @@ public class PlayerManager : MonoBehaviour
     {
         Normal,
         MultiSelect,
-    }
+    } 
     [SerializeField] private LayerMask interactableLayer;
     [SerializeField] private float cameraSpeed = 5f;
     [SerializeField] private float cameraSpeedModifier = 1.6f;
@@ -18,8 +18,6 @@ public class PlayerManager : MonoBehaviour
     
     private Vector2 moveInput;
     private Vector2 velocity;
-    
-    
 
     public void OnMove(InputAction.CallbackContext ctx)
     {
