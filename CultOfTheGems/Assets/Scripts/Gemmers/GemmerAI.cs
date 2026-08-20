@@ -53,7 +53,7 @@ public class GemmerAI : MonoBehaviour,Damageable
     {
         
     }
-
+  
     public void SetState(IGemmerState newState)
     {
         currentState = newState;
