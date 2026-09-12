@@ -1,14 +1,15 @@
-using UnityEngine;
-
-public class WanderGemmerState : IGemmerState
+namespace Gemmers.States
 {
-    public void EnterState(GemmerAI gemmer)
+    public class WanderGemmerState : IGemmerState
     {
-        throw new System.NotImplementedException();
-    }
+        public void EnterState(GemmerAI gemmer)
+        {
+            throw new System.NotImplementedException();
+        }
 
-    public void UpdateState()
-    {
-        throw new System.NotImplementedException();
+        public void UpdateState()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

@@ -1,21 +1,23 @@
-using System;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+namespace Managers
 {
-    public bool paused = false;
-    
-    public static GameManager Instance { get; private set; }
-
-    private void Awake()
+    public class GameManager : MonoBehaviour
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
+        public bool paused = false;
+    
+        public static GameManager Instance { get; private set; }
 
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
+        private void Awake()
+        {
+            if (Instance != null && Instance != this)
+            {
+                Destroy(gameObject);
+                return;
+            }
+
+            Instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
     }
 }

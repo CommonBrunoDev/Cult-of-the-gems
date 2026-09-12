@@ -1,7 +1,8 @@
-using UnityEngine;
-
-public interface IGemmerState
+namespace Gemmers.States
 {
-    void EnterState(GemmerAI gemmer);
-    void UpdateState();
+    public interface IGemmerState
+    {
+        void EnterState(GemmerAI gemmer);
+        void UpdateState();
+    }
 }

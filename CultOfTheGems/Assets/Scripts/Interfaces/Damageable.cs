@@ -1,14 +1,15 @@
-using UnityEngine;
-
-public interface Damageable
+namespace Interfaces
 {
-    void TakeDamage(int damage)
+    public interface Damageable
     {
-        health -= damage;
-        if (health <= 0)
-            OnDestroy();
-    }
-    void OnDestroy();
+        void TakeDamage(int damage)
+        {
+            health -= damage;
+            if (health <= 0)
+                OnDestroy();
+        }
+        void OnDestroy();
 
-    int health {get; set;}
+        int health {get; set;}
+    }
 }
