@@ -30,7 +30,7 @@ namespace Pathfinding
     public class Pathfinding : MonoBehaviour
     {
         private MovementGrid grid;
-        public List<GridSquare> path;
+        public List<GridSquare> path;  
 
         private void Start()
         {
