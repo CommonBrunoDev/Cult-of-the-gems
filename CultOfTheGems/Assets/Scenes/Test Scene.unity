@@ -2380,6 +2380,23 @@ Transform:
   - {fileID: 1179365982}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1623113999 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5713657113296557468, guid: f2a25ca335a4d884f8150f5ab81dc7ba, type: 3}
+  m_PrefabInstance: {fileID: 5196880797425796956}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1623114003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1623113999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2194324eb1bb7546b416bd9969934ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::test
 --- !u!1 &1786712142
 GameObject:
   m_ObjectHideFlags: 0
@@ -2761,6 +2778,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2924817579938227, guid: f2a25ca335a4d884f8150f5ab81dc7ba, type: 3}
+      propertyPath: m_GravityScale
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5713657113296557468, guid: f2a25ca335a4d884f8150f5ab81dc7ba, type: 3}
       propertyPath: m_Name
       value: GemmerTest
@@ -2808,7 +2829,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5713657113296557468, guid: f2a25ca335a4d884f8150f5ab81dc7ba, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1623114003}
   m_SourcePrefab: {fileID: 100100000, guid: f2a25ca335a4d884f8150f5ab81dc7ba, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
